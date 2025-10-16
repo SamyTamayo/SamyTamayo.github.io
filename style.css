@@ -1,0 +1,38 @@
+html{ 
+    background-color: pink;
+} 
+
+*{
+    border: solid 1px white; 
+}
+
+main{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.titulo h1{ 
+   color: rebeccapurple;
+    font-family: "Playfair Display", serif;
+}
+
+.nav a{ 
+    color: royalblue;
+    text-decoration: none;
+    background-color: lightcyan;
+    padding: 2rem;
+    display: inline-block;
+    margin: 1rem;
+    margin: 0,5rem;
+}
+
+,.nav ul{ 
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0,5rem;
+}
