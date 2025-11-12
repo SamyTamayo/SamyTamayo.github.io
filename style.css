@@ -1,9 +1,10 @@
-html{ 
-    background-color: rgb(245, 183, 209);
-} 
-
-    {
-   *border: solid 1px rgb(159, 37, 118); 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #000000 0%, #1a001a 100%);
 }
 
 main{ 
@@ -13,33 +14,37 @@ main{
     flex-direction: column;
     padding-top: 3rem;
     gap: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .titulo h1{ 
-   color: rgb(255, 255, 255);
+    color: #ffffff;
     font-family: "Cal Sans", sans-serif;
     font-size: 3rem;
     text-align: center;
+    text-shadow: 0 0 15px #ff99dd, 0 0 40px #ff66cc;
+    transition: 0.3s ease-in-out;
 }
 
-.nav a{ 
-    color: rgb(219, 55, 175);
+.nav a { 
+    color: white;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
-    padding:1rem;
+    background: linear-gradient(90deg, #ff66b2 0%, #ff1493 100%); 
+    padding: 1rem;
     display: inline-block;
     margin: 1rem;
-    margin: 1rem;
     border-radius: 5px;
-    border: solid 1px  rgb(188, 12, 103);
+    border: none;
     transition: all 0.3s ease-in-out;
     margin-block: 0.5rem;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-li a:hover{
-    background-color: rgb(226, 61, 147);
-    color: rgb(255, 255, 255);
-    transform: scale(1.1) rotate(1deg);
+li a:hover {
+    background: linear-gradient(90deg, #ff1493 0%, #ff66b2 100%); 
+    transform: scale(1.05) rotate(0.5deg);
+    box-shadow: 0 0 8px #ff33aa, 0 0 15px #ff66b2;
 }
 
 .nav ul{ 
@@ -47,5 +52,21 @@ li a:hover{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border-radius: 0,5rem;
+    border-radius: 0.5rem;
+}
+
+canvas#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; 
+  pointer-events: none; 
+  display: block;
+}
+
+.titulo h1:hover {
+  text-shadow: 0 0 25px #ffb3e6, 0 0 50px #ff66cc;
+  transform: scale(1.02) translateY(-1px);
 }
