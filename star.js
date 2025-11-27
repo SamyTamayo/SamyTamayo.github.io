@@ -12,17 +12,18 @@ for (let i = 0; i < 150; i++) {
         y: Math.random() * canvas.height,
         r: Math.random() * 1.5 + 1,
         alpha: Math.random(),
-        tw: (Math.random() * 0.015 + 0.005),
+        velBrillo: (Math.random() * 0.015 + 0.005),
     });
 }
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (let s of stars) {
+    for (let i = 0; i < stars.length; i++) {
+    let s = stars[i];
      
-        s.alpha += s.tw;
-        if (s.alpha > 1 || s.alpha < 0.3) s.tw *= -1;
+        s.alpha += s.velBrillo;
+        if (s.alpha > 1 || s.alpha < 0.3) s.velBrillo *= -1;
 
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
